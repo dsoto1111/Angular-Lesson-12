@@ -1,0 +1,25 @@
+<div>
+    <app-child [appId]="1">
+    </app-child><br>
+    <button (click)="start()">Start Countdown</button>
+    <p>{{ count() }}</p>
+    <br>
+    <br>
+    <app-child #child>
+    </app-child><br>
+    <button (click)="begin()">Start Countdown</button>
+    <p #para>{{ child.seconds }}</p>
+    <br>
+    <br>       
+    <app-child #kid>
+    </app-child><br>
+    <button (click)="commence()">Start Countdown</button>
+    <br>
+    <br>     
+    <label>String Token: </label>{{ getToken() }} 
+    <br>
+    <br> 
+    <ng-template [ngIf]="true">
+        <p>This is in ng-template</p>
+    </ng-template>    
+</div>
